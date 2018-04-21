@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	
+	
+	<package name="user" namespace="/user"
+		extends="struts-default">
+		<action name="userlist" method="userlist"
+			class="manageAction">
+			<result name="success">userlist.jsp</result>
+		</action>
+		
+		<action name="userlist2" method="userlist2"
+			class="manageAction">
+			<result name="success">userlist2.jsp</result>
+		</action>
+		
+		<action name="usersearch" method="usersearch"
+			class="manageAction">
+			<result name="success">userlist2.jsp</result>
+		</action>
+		
+		<action name="useradd" method="useradd"
+			class="manageAction">
+			<result name="success" >useradd.jsp</result>
+		</action>
+		
+		<action name="useradd2" method="useradd2"
+			class="manageAction">
+		</action>
+		
+		<action name="usershow" method="usershow"
+			class="manageAction">
+			<result name="success" >usershow.jsp</result>
+		</action>
+		
+		<action name="userupdate" method="userupdate"
+			class="manageAction">
+			<result name="success" >userupdate.jsp</result>
+		</action>
+		
+		<action name="userupdate2" method="userupdate2"
+			class="manageAction">
+		</action>
+		
+		<action name="userdel" method="userdel"
+			class="manageAction">
+		</action>
+		
+		<action name="passwordupdate" method="passwordupdate"
+			class="manageAction">
+		</action>
+		
+	</package>
+
+</struts>

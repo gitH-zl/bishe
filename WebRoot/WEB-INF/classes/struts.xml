@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+
+
+
+
+	<package name="login" namespace="/"
+		extends="struts-default">
+		<action name="login" method="login" class="manageAction">
+			<result name="success1" type="redirect">index</result>
+			<result name="success2" type="redirect">index1</result>
+		</action>
+		<action name="loginout" method="loginout"
+			class="manageAction">
+			<result name="success" type="redirect">login.jsp</result>
+		</action>
+		<action name="index" method="index"
+			class="manageAction">
+			<result name="success" >index.jsp</result>
+		</action>
+		<action name="index1" method="index1"
+			class="manageAction">
+			<result name="success" >index1.jsp</result>
+		</action>
+	</package>
+
+	<include file="struts-user.xml"></include>
+	<include file="struts-book.xml"></include>
+
+
+	
+</struts>

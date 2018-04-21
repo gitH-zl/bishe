@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	
+	
+	<package name="book" namespace="/book"
+		extends="struts-default">
+		<action name="booklist" method="booklist"
+			class="manageAction">
+			<result name="success">booklist.jsp</result>
+		</action>
+		
+		<action name="bookadd" method="bookadd"
+			class="manageAction">
+		</action>
+		
+		<action name="bookshow" method="bookshow"
+			class="manageAction">
+			<result name="success" >bookshow.jsp</result>
+		</action>
+		
+		<action name="bookshow2" method="bookshow2"
+			class="manageAction">
+			<result name="success" >bookshow.jsp</result>
+		</action>
+		
+		<action name="bookupdate" method="bookupdate"
+			class="manageAction">
+			<result name="success" >bookupdate.jsp</result>
+		</action>
+		
+		<action name="bookupdate2" method="bookupdate2"
+			class="manageAction">
+		</action>
+		
+		<action name="bookdel" method="bookdel"
+			class="manageAction">
+		</action>
+		
+		<action name="booklist2" method="booklist2"
+			class="manageAction">
+			<result name="success">booklist2.jsp</result>
+		</action>
+		
+		<action name="booksearch" method="booksearch"
+			class="manageAction">
+			<result name="success">booklist.jsp</result>
+		</action>
+		
+		<action name="booksearch2" method="booksearch2"
+			class="manageAction">
+			<result name="success">booklist2.jsp</result>
+		</action>
+		
+		<action name="bookdownload" method="bookdownload"
+			class="manageAction"></action>
+	</package>
+	
+
+</struts>
